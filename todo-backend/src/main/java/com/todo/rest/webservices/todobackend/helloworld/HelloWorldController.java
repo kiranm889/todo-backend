@@ -1,4 +1,4 @@
-package com.todo.rest.webservices.todobackend;
+package com.todo.rest.webservices.todobackend.helloworld;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,12 +20,13 @@ public class HelloWorldController {
 	
 	@GetMapping(path = "/hello-world-bean")
 	public HelloWorldBean helloWorldBean() {
-		return new HelloWorldBean("Hello World");
+//		throw new RuntimeException("Some Error occured ! contact help support");
+		return new HelloWorldBean("Hello World-changed");
 	}
 	
-	@GetMapping(path = "/hello-world/path-variable/{name1}")
-	public HelloWorldBean helloWorldPathVariable(@PathVariable String name1) {
-		return new HelloWorldBean(String.format("Hello World. %s",name1));
+	@GetMapping(path = "/hello-world/path-variable/{name}")
+	public HelloWorldBean helloWorldPathVariable(@PathVariable String name) {
+		return new HelloWorldBean(String.format("Hello World. %s",name));
 		
 	}
 

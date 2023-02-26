@@ -1,4 +1,4 @@
-package com.todo.rest.webservices.todobackend;
+package com.todo.rest.webservices.todobackend.helloworld;
 
 public class HelloWorldBean {
 
